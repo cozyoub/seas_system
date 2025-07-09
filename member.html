@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+
+    <!--[if lt IE 9]>
+      <script src="./js/html5.js"></script>
+   <![endif]-->
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="index.html">보통로고</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">서비스신청<span>12</span></a></li>
+                    <li><a href="fee.html">서비스이용료</a></li>
+                    <li class="on"><a href="member.html">회원정보</a></li>
+                </ul>
+            </nav>
+            <p class="open_menu"><a href="#">메뉴열기</a></p>
+            <p class="close_menu"><a href="#">메뉴닫기</a></p>
+            <div class="bgbk"></div>
+        </header>
+        <div id="container">
+            <section>
+                <h5>회원정보</h5>
+                <div class="utillWrap">
+                    <div class="filter">
+                        <div>
+                            <select>
+                                <option>모두</option>
+                                <option>결제상태</option>
+                                <option>지역</option>
+                            </select>
+                        </div>
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="검색어를 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="management">
+                        <button type="button" class="btn btn-primary btn01" data-toggle="modal" data-target="#memberAdd">회원추가</button>
+                        <button type="button" class="btn btn-primary btn02" data-toggle="modal" data-target="#memberEdit">수정</button>
+                        <button type="button" class="btn btn-primary btn03" data-toggle="modal" data-target="#memberDel">삭제</button>
+                    </div>
+                </div>
+                <div class="tableWrap">
+                    <div class="tableContent">
+                        <div class="basicTable" id="thead">
+                            <div>
+                                <ul>
+                                    <li>아이디</li>
+                                    <li>지역</li>
+                                    <li>박물관 이름</li>
+                                    <li>결제상태</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="basicTable">
+                            <div>
+                                <ul>
+                                    <li class="inputRow"><input type="checkbox"></li>
+                                    <li>gildong 221</li>
+                                    <li>서울</li>
+                                    <li>서울 박물관</li>
+                                    <li>결제완료</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="basicTable">
+                            <div>
+                                <ul>
+                                    <li class="inputRow"><input type="checkbox"></li>
+                                    <li>hann_ee</li>
+                                    <li>부산</li>
+                                    <li>부산 박물관</li>
+                                    <li><button type="button">승인</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="basicTable">
+                            <div>
+                                <ul>
+                                    <li class="inputRow"><input type="checkbox"></li>
+                                    <li>gildong 221</li>
+                                    <li>서울</li>
+                                    <li>서울 박물관</li>
+                                    <li>결제완료</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="basicTable">
+                            <div>
+                                <ul>
+                                    <li class="inputRow"><input type="checkbox"></li>
+                                    <li>gildong 221</li>
+                                    <li>서울</li>
+                                    <li>서울 박물관</li>
+                                    <li>결제완료</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="basicTable">
+                            <div>
+                                <ul>
+                                    <li class="inputRow"><input type="checkbox"></li>
+                                    <li>gildong 221</li>
+                                    <li>서울</li>
+                                    <li>서울 박물관</li>
+                                    <li>결제완료</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example" class="navi">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </div>
+
+    <!--추가 모달-->
+    <div class="modal fade" id="memberAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">회원추가</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">ID</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">지역</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">박물관이름</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">서비스사용</label>
+                            <select>
+                                <option>사용</option>
+                                <option>미사용</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary">추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--수정 모달-->
+    <div class="modal fade" id="memberEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">회원추가</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">ID</label>
+                            <input type="text" class="form-control" value="gildong">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">지역</label>
+                            <input type="text" class="form-control" value="부산">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">박물관이름</label>
+                            <input type="text" class="form-control" value="부산박물관">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">서비스사용</label>
+                            <select>
+                                <option selected>사용</option>
+                                <option>미사용</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
